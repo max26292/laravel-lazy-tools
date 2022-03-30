@@ -6,13 +6,12 @@ use Max26292\LaravelLazyTools\Repository\BaseRepository;
 class {{ class }} extends BaseRepository
 {
     public function __construct()
-        {
-            $this->init();
-        }
+    {
+        $this->init();
+    }
 
     public function init()
-        {
-            $this->model = //please add your model target;
-        }
+    {
+        $this->model = //please add your model target;
     }
 }
