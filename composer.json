@@ -1,6 +1,8 @@
 {
     "name": "max26292/laravel-lazy-tools",
     "description": "This tools for lazy guys, used to generate repository,interface and response",
+    "type": "library",
+    "keywords": ["laravel","lazy-tools","design-pattern"],
     "require": {
         "php": ">=7.4.0",
         "laravel/framework": "^8|^9"
