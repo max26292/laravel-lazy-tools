@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ namespace }};
+use App\Repositories\BaseRepository;
+
+class {{ class }} extends BaseRepository
+{
+    public function __construct()
+        {
+            $this->init();
+        }
+
+    public function init()
+        {
+            $this->model = //please add your model target;
+        }
+    }
+}

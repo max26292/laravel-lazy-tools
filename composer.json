@@ -1,0 +1,29 @@
+{
+    "name": "max26292/laravel-lazy-tools",
+    "description": "This tools for lazy guys, used to generate repository,interface and response",
+    "require": {
+        "php": ">=7.4.0",
+        "laravel/framework": "^8|^9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Max26292\\LaravelLazyTools\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Max26292\\LaravelLazyTools\\ServiceProvider\\LaravelLazyToolsServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Hoang Nguyen",
+            "email": "max26292@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
