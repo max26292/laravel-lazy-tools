@@ -1,6 +1,7 @@
 <?php
 
 namespace {{ namespace }};
+
 use Max26292\LaravelLazyTools\Repository\BaseRepository;
 
 class {{ class }} extends BaseRepository
