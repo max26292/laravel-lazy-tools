@@ -5,7 +5,7 @@
     "keywords": ["laravel","lazy-tools","design-pattern"],
     "require": {
         "php": ">=7.4.0",
-        "laravel/framework": "^8|^9"
+        "laravel/framework": "^8|^9|^10"
     },
     "license": "MIT",
     "autoload": {
