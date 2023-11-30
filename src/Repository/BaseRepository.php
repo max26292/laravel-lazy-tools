@@ -60,9 +60,13 @@ abstract class BaseRepository
      */
     public function create(array $attributes)
     {
-        return $this->model->insertGetId($attributes);
+        return $this->model->create($attributes);
     }
 
+    public function insertGetId(array $attributes)
+    {
+        return $this->model->insertGetId($attributes);
+    }
     /**
      * @param array $attributes
      * @return bool
