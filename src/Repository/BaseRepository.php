@@ -56,13 +56,17 @@ abstract class BaseRepository
 
     /**
      * @param array $attributes
-     * @return int
+     * @return null | mixed
      */
     public function create(array $attributes)
     {
         return $this->model->create($attributes);
     }
-
+    /**
+     * 
+     * @param array $attributes 
+     * @return int| float| mixed 
+     */
     public function insertGetId(array $attributes)
     {
         return $this->model->insertGetId($attributes);
