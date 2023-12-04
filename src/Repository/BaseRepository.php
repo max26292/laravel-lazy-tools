@@ -1,8 +1,19 @@
 <?php
 
 namespace Max26292\LaravelLazyTools\Repository;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 
+/**
+ * Class ModelExtend
+ * @package Max26292\LaravelLazyTools\Repository
+ * @mixin Model
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
+ 
+class ModelExtend extends Model{
+    // just a empty class for IDE
+}
 /**
  *
  */
@@ -10,7 +21,7 @@ abstract class BaseRepository
 {
 
     /**
-     * @var Builder
+     * @var ModelExtend
      */
     protected $model;
 
