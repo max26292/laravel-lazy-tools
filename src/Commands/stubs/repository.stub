@@ -3,6 +3,7 @@
 namespace {{ namespace }};
 
 use Max26292\LaravelLazyTools\Repository\BaseRepository;
+use {{ model }};
 
 class {{ class }} extends BaseRepository
 {
@@ -13,6 +14,7 @@ class {{ class }} extends BaseRepository
 
     public function init()
     {
-        $this->model = //please add your model target;
+        //please add your model target;
+        $this->model = app({{ modelClass }}::class);
     }
 }

@@ -23,15 +23,6 @@ class CreateRepository extends GeneratorCommand
     protected $description = 'Create New Repository';
     protected $type = 'Repository';
 
-//    /**
-//     * Execute the console command.
-//     *
-//     * @return int
-//     */
-//    public function handle()
-//    {
-//
-//    }
     /**
      * Get the stub file for the generator.
      *
@@ -85,5 +76,40 @@ class CreateRepository extends GeneratorCommand
              'r',
              InputOption::VALUE_NONE, 'Indicates if the generated controller should be a resource controller'],
         ];
+    }
+
+    /**
+     * Build the class with the given name.
+     *
+     * @param  string  $name
+     * @return string
+     *
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     */
+    protected function buildClass($name)
+    {
+        $stub = $this->files->get($this->getStub());
+
+        return $this->replaceNamespace($stub, $name)->replaceModel($stub,$name)->replaceClass($stub, $name);
+    }
+
+    /**
+     * @param $stub
+     * @param $name
+     * @return $this
+     */
+    protected function replaceModel(&$stub,$name){
+        $repository = str_replace($this->getNamespace($name).'\\', '', $name);
+        $modelName = str_replace('Repository','',$repository);
+
+        $model = $this->qualifyModel($modelName);
+
+        $stub = str_replace(
+            '{{ model }}',
+            $model,
+            $stub
+        );
+        $stub = str_replace('{{ modelClass }}',$modelName,$stub);
+        return $this;
     }
 }
